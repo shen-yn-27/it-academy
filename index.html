@@ -7,7 +7,7 @@
 </head>
 <body> <!--Основная часть документа-->
     <h1>Моя первая страница</h1> <!--Заголовок первого уровня-->
-    <h2>Содержание</h2> <!--Заголовок второго уровня-->
+    <h2 id="soderzanie">Содержание</h2> <!--Заголовок второго уровня-->
     <ol> <!--Нумерованный список-->
         <li>Парагрофы и тексты</li> <!--Пункты нумеровноного списка-->
         <li>Блочные и строчные элементы</li><!--Пункты нумеровноного списка-->
@@ -54,5 +54,34 @@
     <div>
         <img src="https://main-cdn.sbermegamarket.ru/hlr-system/-15/696/320/559/231/711/600008968334b0.jpeg" width="400">
     </div>
+<h3>Формы</h3>
+<form> <!--Форма ввода данных-->
+    <div>
+        <label for="username"> Имя:</label>
+        <input id="username" placeholder="Ведите ваше имя">
+    </div>
+    <br> <!--Разрыв между элементами-->
+    <div>
+        <label for="email"> Эл почта:</label>
+        <input id="email" placeholder="Введите электронную почту">
+    </div>
+    <br>
+    <div>
+        <input id="agree" type="checkbox">
+        <label for="agree"> Я согласен на обработку данных</label>
+    </div>
+    <br>
+    <button>Отправить</button>
+</form>
+    <h3>Ссылки</h3>
+<div>
+    <a href="https://google.com" target="_blank">Ссылка на гугл</a>
+</div>
+<div>
+    <a href="it-academy" target="_blank">Ссылка на вторую страницу</a>
+</div>
+<div>
+    <a href="#soderzanie">Ссылка на содержание</a>
+</div>
 </body>
 </html>
