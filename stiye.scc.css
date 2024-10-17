@@ -1,0 +1,65 @@
+/*Основы понятия CSS*/
+
+/*1. Селокторы*/
+
+/*тег элемента*/
+body {
+    background-color: #f0f0f0;
+}
+
+/*1.2 Класс элеиента*/
+.section {
+    border: 2px solid black;
+    padding-left: 20px;
+    margin: 20px;
+}
+
+/*1.3 Id элементы*/
+#selectors{
+    color: red;
+}
+
+#selectors p{
+    color: red;
+}
+
+#classes {
+    color: green;
+}
+
+#classes p {
+    color: green;
+}
+
+#class {
+    color: orange;
+}
+
+#class p {
+    color: orange;
+}
+
+/*2. блочная модель*/
+.section img {
+    max-width: 500px; /*Максимальная ширина изображения*/
+    width: 500px; /*Ширина изображения*/
+    height: 300px; /*Высота изображения*/
+    max-height: 300px; /*Максимальная высота изображения*/
+}
+
+.block-element {
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    padding: 20px; /*Внутренние отступы*/
+    margin: 20px; /*Внешине отступы*/
+}
+
+/*Стилизация текста*/
+.text-size{
+    font-size: 24px;
+}
+
+.text-weight {
+    font-weight: 700;
+}
