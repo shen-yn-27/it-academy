@@ -63,3 +63,20 @@ body {
 .text-weight {
     font-weight: 700;
 }
+
+.text-italic {
+    font-style: italic; /*курсив*/
+}
+
+.text-underline {
+    text-decoration: underline; /*Подчеркнутый*/
+}
+
+.text-center {
+    text-align: center; /*По центру*/
+}
+
+.text-family {
+    font-family: Roboto, Arial, sans-serif; /*смейства шрифтов*/
+}
+
