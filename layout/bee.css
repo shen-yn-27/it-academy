@@ -3,6 +3,12 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.hoho {
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .nav ul {
@@ -15,6 +21,7 @@ body {
 
 .nav li {
     margin-right: 40px;
+    margin-left: 20px;
 }
 
 header {
@@ -27,3 +34,39 @@ header {
     padding-bottom: 10px;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    max-width: 820px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.main {
+    display: flex;
+}
+
+.sale {
+    width: 60%;
+    margin-right: 20px;
+}
+
+.benefits {
+    width: 40%;
+}
+.ree {
+    width: 100%;
+    text-align: center;
+}
+.ree thead {
+    background-color: gainsboro;
+}
+
+.footer {
+    background-color: orange;
+    color: white;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+}
