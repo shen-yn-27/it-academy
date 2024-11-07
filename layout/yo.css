@@ -55,7 +55,7 @@ body {
     background-color: #87509c;
     color: #ffffff;
     border: none; /*Без рамки*/
-    cursor: pointer; /*Палец при нваедении*/
+    cursor: pointer;
 }
 
 .main button:hover {

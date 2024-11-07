@@ -1,0 +1,44 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.ee {
+    height: 100vh;
+    background-image: url("https://avatars.mds.yandex.net/i?id=1ec81292373918dcc556459ff691bb24_l-5233284-images-thumbs&n=13");
+    background-size: cover;
+    background-position: center;
+}
+
+.rr {
+    margin-top: 5%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.ds {
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    left:400px;
+    position: absolute;
+    top: 260px;
+    font-family: sans-serif;
+}
+
+.ds h4 {
+    font-weight: 500;
+    font-size: 35px;
+    color: gainsboro;
+}
+
+.ds button {
+    cursor: pointer;
+    width: 400px;
+    height: 100px;
+    font-size: 25px;
+    background-color: white;
+    border: none;
+}
