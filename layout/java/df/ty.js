@@ -1,15 +1,18 @@
-let cf = document.getElementById('button')
+let cf = document.getElementById('cf')
 
 function color() {
-    let body = document.body
-    let backgroundColor = body.style.backgroundColor
+    let body = document.body;
+    let backgroundColor = body.style.backgroundColor;
 
-    if (backgroundColor != red) {
-        body.style.backgroundColor = 'red'
+    if (backgroundColor !=="red") {
+        body.style.backgroundColor = 'red';
     }
 
-    else (backgroundColor != blue)
-    body.style.backgroundColor = 'blue'
+    else if ( backgroundColor !== 'blue' ) {
+        body.style.backgroundColor = 'blue'
+    }
 }
 
-button.addEventListener('click', color )
+// button.textContent = ("click", color)
+
+cf.addEventListener('click', color)
