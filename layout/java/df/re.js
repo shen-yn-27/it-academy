@@ -1,0 +1,29 @@
+alert('Добро пожаловать. Пожалуйста введите свои данные')
+
+let name = prompt('Ваше имя')
+let nameElement = document.getElementById('name')
+nameElement.innerText = name
+let lastname = prompt('Ваша фамилия')
+let lastnameElement = document.getElementById('lastname')
+lastnameElement.innerText = lastname
+let middlename = prompt('Ваше отчество ')
+let middlenameElement = document.getElementById('middlename')
+middlenameElement.innerText = middlename
+let age = prompt('Ваш возраст ')
+let ageElement = document.getElementById('age')
+ageElement.innerText = age
+let school = prompt('Школа вкоторй вы обучаетесь ')
+let schoolElement = document.getElementById('school')
+schoolElement.innerText = school
+let class = prompt('Класс в школе')
+let classElement = document.getElementById('class')
+classElement.innerText = class
+let sport = prompt('Любимый вид спорта')
+let middlenameElement = document.getElementById('middlename')
+middlenameElement.innerText = middlename
+let middlename = prompt('Ваше отчество ')
+let middlenameElement = document.getElementById('middlename')
+middlenameElement.innerText = middlename
+let middlename = prompt('Ваше отчество ')
+let middlenameElement = document.getElementById('middlename')
+middlenameElement.innerText = middlename
