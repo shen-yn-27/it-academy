@@ -1,7 +1,14 @@
-function text () {
+function c () {
     let span = document.getElementById('q')
-    span.innerText = ТЕКСТ
+    let text = span.innerText
+    if (text !== 'ТЕКСТ') {
+        span.innerText = 'ТЕКСТ'
+    }
+    else if (text !== 'ИЗМЕНИТЬ ТЕКСТ') {
+        span.innerText = 'ИЗМЕНИТЬ ТЕКСТ'
+    }
 }
-let S = document.getElementById('s')
 
-s.addEventListener('click', text )
+let s = document.getElementById('S')
+
+s.addEventListener('click', c )
