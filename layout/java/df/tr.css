@@ -1,6 +1,6 @@
 div {
     display: grid;
-    grid-template-columns: 200px 120px auto;
+    grid-template-columns: 200px 120px 200px;
 }
 
 span {
