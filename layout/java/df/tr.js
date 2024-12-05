@@ -1,35 +1,34 @@
 let d1 = document.getElementById('d1')
 
-function rrrr(text) {
-    let d1Text = d1.value
-    let span1 = d1Text.substr(0, d1Text.length - 0)
+let span1 = document.getElementById('span1')
 
-    let span = document.getElementById('span1')
-
-    span.innerText = span1
-}
+let span2 = document.getElementById('span2')
 
 let d2 = document.getElementById('d2')
 
-function rr(text) {
-    let d2Text = d2.value
-    let span2 = d2Text.substr(0, d2Text.length - 0)
+let we = document.getElementById('we')
 
-    let span = document.getElementById('span2')
+let qw = document.getElementById('qw')
 
-    span.innerText = span2
+let q = document.getElementById('q')
+
+function f() {
+    span1.innerText = d1.value
 }
 
-let d3 = document.getElementById('d3')
-
-function rrr(text) {
-    let d3Text = d3.value
-    let span3 = d3Text.substr(0, d3Text.length - 0)
-
-    let span = document.getElementById('span3')
-
-    span.innerText = span3
+function e() {
+    span2.innerText = d2.value
 }
 
-let q
+function re() {
+    span1.innerText = ''
+    span2.innerText = ''
+    d1.value = ''
+    d2.value = ''
+}
+
+we.addEventListener('click', f)
+qw.addEventListener('click', e)
+q.addEventListener('click', re)
+
 
