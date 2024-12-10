@@ -1,0 +1,34 @@
+.blue {
+    background-color: deepskyblue;
+    height: 350px;
+    width: 33%;
+}
+
+.green {
+    background-color: yellowgreen;
+    height: 350px;
+    width: 33%;
+}
+
+.red {
+    background-color: teal;
+    height: 350px;
+    width: 33%;
+}
+
+.blocks {
+    display: flex;
+    margin-top: 40px;
+}
+
+#we {
+    color: darkturquoise;
+}
+
+#qw {
+    color: yellowgreen;
+}
+#w {
+    color: teal;
+    
+}
