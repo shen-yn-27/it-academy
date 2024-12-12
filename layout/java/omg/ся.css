@@ -1,0 +1,33 @@
+
+
+button{
+    width:190px; ;
+    height: 120px;
+    font-size: 50px;
+    background-color: gray;
+}
+
+#a {
+    width:580px;
+    height: 120px;
+    background-color: darkorange;
+}
+
+input {
+    width: 764px;
+    height: 100px;
+    font-size: 50px;
+    background-color: black;
+    color: white;
+}
+
+.r {
+    background-color: darkslategrey;
+    height: 760px;
+    width: 800px;
+}
+
+.s {
+    margin-left: 13px;
+    margin-bottom: 13px;
+}

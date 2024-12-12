@@ -7,3 +7,7 @@ function appendValue(value) {
 function compute() {
     input.value = eval(input.value);
 }
+
+function clearInput() {
+    input.value = ''
+}
