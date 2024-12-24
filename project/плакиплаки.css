@@ -1,0 +1,33 @@
+.q {
+    background-color: white;
+    color: black;
+    margin-bottom: 5px;
+}
+
+.w {
+    margin-bottom: 5px;
+    background-color: black;
+    color: white;
+}
+
+.e {
+    margin-bottom: 5px;
+    background-color: gray;
+    color: black;
+}
+
+.r {
+    margin-bottom: 5px;
+    background-color: goldenrod;
+    color: black;
+}
+
+.t {
+    margin-bottom: 30px;
+    background-color: darkblue;
+    color: yellowgreen;
+}
+
+#a {
+    font-size: 35px;
+}

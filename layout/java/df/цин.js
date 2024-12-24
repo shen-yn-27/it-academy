@@ -12,9 +12,7 @@ let w = document.getElementById('w')
 
 let q = document.getElementById('q')
 
-function l() {
-    z.innerText = d1.value
-}
+
 
 function e() {
     x.innerText = d2.value
