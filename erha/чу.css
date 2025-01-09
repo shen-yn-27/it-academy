@@ -1,0 +1,25 @@
+#d {
+    font-size: 50px;
+    font-family: Calibri, Georgia, Times, 'Times New Roman', serif;
+}
+
+#i {
+    font-size: 50px;
+    font-family: Calibri, Georgia, Times, 'Times New Roman', serif;
+}
+
+.q {
+    width: 49%;
+    height:400px;
+    padding: 10px;
+    background-color: aliceblue ;
+    justify-content: flex-start;
+    flex-direction: column;
+    display: inline-block;
+}
+
+.w {
+    justify-content: flex-end;
+    flex-direction: row ;
+    display: inline-block;
+}
