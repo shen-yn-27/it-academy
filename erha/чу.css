@@ -21,5 +21,8 @@
 .w {
     justify-content: flex-end;
     flex-direction: row ;
-    display: inline-block;
+}
+
+.blocks {
+    display: flex;
 }
