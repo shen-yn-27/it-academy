@@ -73,33 +73,47 @@ let usersList = document.getElementById('users-list')
 
 //Функция для вывода на экран
 function showUsers() {
-    //Создаём карточку пользователя
-    let userCard = document.createElement('div')
-    let userAvatar = document.createElement('div')
-    let userName = document.createElement('h2')
-    let userPhone = document.createElement('p')
-    let userEmail = document.createElement('p')
-    let userBirthday = document.createElement('p')
+    //Циклы в JavaScript
+    //for (let элемент_массива of массив) {
+    //действия для выполнения над элементом
+    //}
 
-    //Добавляем карточке пользвателя класс user-card
-    userCard.classList.add('user-card')
+    for (let user of users) {
+        //Создаём карточку пользователя
+        let userCard = document.createElement('div')
+        let userAvatar = document.createElement('div')
+        let userName = document.createElement('h2')
+        let userPhone = document.createElement('p')
+        let userEmail = document.createElement('p')
+        let userBirthday = document.createElement('p')
 
-    userAvatar.classList.add('user-avatar')
+        //Добавляем карточке пользвателя класс user-card
+        userCard.classList.add('user-card')
 
-    userName.classList.add('user-name')
+        userAvatar.classList.add('user-avatar')
 
-    userAvatar.innerHTML = `<img src="${firstUser.avatar}" alt="">`
+        userName.classList.add('user-name')
 
-    userName.innerHTML = firstUser.name
-    userPhone.innerHTML =`<b>Телефон:</b> ${firstUser.phone} `
-    userEmail.innerHTML =`'<b>Email:</b> ${firstUser.email} `
-    userBirthday.innerHTML =`<b>Дата рождения:</b> ${firstUser.birthday} `
+        userAvatar.innerHTML = `<img src="${ user.avatar}" alt="">`
 
-    userCard.append(userAvatar, userName, userPhone, userEmail, userBirthday)
+        userName.innerHTML = user.name
+        userPhone.innerHTML =`<b>Телефон:</b> ${user.phone} `
+        userEmail.innerHTML =`<b>Email:</b> ${user.email} `
+        userBirthday.innerHTML =`<b>Дата рождения:</b> ${user.birthday} `
+
+        userCard.append(userAvatar, userName, userPhone, userEmail, userBirthday)
 
 
-    //Поместить карточку пользователя в конец списка
-    usersList.append(userCard)
+        //Поместить карточку пользователя в конец списка
+        usersList.append(userCard)
+    }
 }
 
 showUsers()
+
+
+let numbers = [1, 2, 3, 4, 5, 6]
+
+for (let num of numbers) {
+    numbers = num + 1
+}
