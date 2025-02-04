@@ -1,7 +1,7 @@
 let usersList = document.getElementById('users-list');
 
 //Список пользователей
-let users = []
+let users = [];
 
 //Асинхронная функция получения списка пользователей
 //Асинхронная функция умеет дожидаться выполнения операции
@@ -16,7 +16,7 @@ async function getUsers() {
 }
 
 
-function showUsers() {
+function showTasks() {
     //Циклы в JavaScript
     //for (let элемент_массива of массив) {
     //действия для выполнения над элементом
