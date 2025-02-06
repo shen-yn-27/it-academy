@@ -1,12 +1,12 @@
-let pages  = document.getElementById('pages');
+let container = document.getElementById('container');
 
 let users = []
 
+
 async function getUsers() {
-let response = await axios.get('https://kinopoiskapiunofficial.tech/api/v2.2/films?', {
+let response = await axios.get('https://kinopoiskapiunofficial.tech/api/v2.2/films?type=TV_SERIES', {
     headers: {
         'X-API-KEY': 'd346c82b-bd03-444d-9600-7a7a36f9358c',
-        'Content-Type':'TV_SERIES',
     },
 })
 users = response.data.items
@@ -15,6 +15,7 @@ users = response.data.items
 }
 
 function showTasks() {
+
     for (let user of users) {
         //Создаём карточку пользователя
         let userCard = document.createElement('div')
@@ -38,16 +39,17 @@ function showTasks() {
         userAvatar.innerHTML = `<img src="${user.posterUrl}" alt="" class="movie__cover">`
 
         userName.innerHTML = user.nameRu
-        userPhone.innerHTML = user.ratingImdb
+        userPhone.innerHTML = user.ratingKinopoisk
         userEmail.innerHTML = user.year
 
-        userCard.append(userAvatar, userName, userPhone, userEmail)
-        countries.append(userCard)
-
+        userCard.append(userAvatar)
+        userCard.append(userName, userPhone)
+        userCard.append(userEmail)
 
         //Поместить карточку пользователя в конец списка
-        pages.append(userCard)
+        container.append(userCard)
     }
 }
 
 getUsers()
+
