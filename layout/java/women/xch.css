@@ -17,7 +17,7 @@ body {
 .header__content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     padding-top: 16px;
     padding-bottom: 40px;
 }
@@ -127,4 +127,32 @@ body {
 .page.active {
     background: white;
     color: #000000;
+}
+
+#name__movie {
+    height: 30px;
+    width: 500px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: none;
+    text-align: center;
+}
+
+#hide {
+    height: 25px;
+    width: 90px;
+    cursor: pointer;
+    background: white;
+    border: none;
+    border-radius: 8px
+}
+
+#cancel {
+    height: 25px;
+    width: 90px;
+    cursor: pointer;
+    background: white;
+    border: none;
+    border-radius: 8px;
+    margin-right: 100px;
 }

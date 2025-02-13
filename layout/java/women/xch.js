@@ -1,4 +1,7 @@
 let container = document.getElementById('container');
+let hide = document.getElementById('hide');
+let cancel = document.getElementById('cancel');
+let nameMovie = document.getElementById('name__movie');
 
 let users = []
 let page = 1
@@ -60,19 +63,32 @@ function button() {
         async function changePage() {
             page = button.innerText
             await getUsers()
-
-
-            if (button = 'page = button.innerText') {
-                this.classList.add('active')
+            for (let buttonn of buttons) {
+                buttonn.classList.remove('active')
             }
-            else if (button !== 'page = button.innerText') {
-                this.classList.add('disabled')
-            }
+            button.classList.add('active')
         }
 
         button.addEventListener('click', changePage)
     }
 }
+
+async function searchTask() {
+    let response = await axios.get('https://kinopoiskapiunofficial.tech/api/v2.2/films?type=TV_SERIES', {
+        params: {
+            page: page,
+            keyword: nameMovie.value,
+        },
+        headers: {
+            'X-API-KEY': 'd346c82b-bd03-444d-9600-7a7a36f9358c',
+        },
+    })
+    users = response.data.items
+    showTasks()
+}
+hide.addEventListener('click', searchTask);
+
+cancel.addEventListener('click', getUsers);
 
 
 
