@@ -51,6 +51,12 @@ function showTasks() {
         userCard.append(userEmail)
 
         container.append(userCard)
+
+        function redirectToFilm() {
+            window.open('annexch.html', '_self')
+        }
+
+        userCard.addEventListener('click', redirectToFilm)
     }
 }
 
@@ -90,11 +96,10 @@ hide.addEventListener('click', searchTask);
 
 cancel.addEventListener('click', getUsers);
 
+function info() {
+    
+}
 
 
 getUsers()
 button()
-
-
-
-
