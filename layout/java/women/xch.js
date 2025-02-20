@@ -53,7 +53,8 @@ function showTasks() {
         container.append(userCard)
 
         function redirectToFilm() {
-            window.open('annexch.html', '_self')
+            let filmId = user.kinopoiskId
+            window.open(`annexch.html?id=${ filmId }`, '_self')
         }
 
         userCard.addEventListener('click', redirectToFilm)

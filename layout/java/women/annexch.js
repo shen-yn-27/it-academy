@@ -1,4 +1,6 @@
-const API_KEY = "4d5b1014-2ce3-49d6-b2ac-e47e01ed4533";
+let container = document.getElementById('container');
+const API_KEY = "d346c82b-bd03-444d-9600-7a7a36f9358c";
+//4d5b1014-2ce3-49d6-b2ac-e47e01ed4533
 let movie = null;
 
 async function getMovie() {
@@ -11,6 +13,7 @@ async function getMovie() {
         // Выводим предупреждение о том, что фильм не найден
         alert('Фильм не найден!');
         // Открываем в браузере страницу со списком всех фильмов
+        window.open('xch.html');
     }
     else {
         // Подставляем полученный id фильма в ссылку на получение данных о конкретном фильме
@@ -20,8 +23,47 @@ async function getMovie() {
                 "X-API-KEY": API_KEY,
             },
         });
-        movie = response.data;
+        movie = response.data
+        showTasks()
     }
 }
 
-getMovie();
+
+function showTasks() {
+    container.innerHTML = ''
+
+    let movieCard = document.createElement('div')
+    let movieAvatar = document.createElement('div')
+    let movieName = document.createElement('h1')
+    let moviePhone = document.createElement('p')
+    let movieEmail = document.createElement('div')
+
+    movieCard.classList.add('movie')
+
+    movieAvatar.classList.add('movie__cover')
+
+    movieName.classList.add('movie__title')
+
+    moviePhone.classList.add('movie__description')
+
+    movieEmail.classList.add('movie__value')
+
+
+    movieAvatar.innerHTML = `<img src="${movie.posterUrlPreview}" alt="" class="movie__cover">`
+    movieName.innerHTML = movie.nameRu
+    // moviePhone.innerHTML = movie.shortDescription
+    // movieEmail.innerHTML =`<b>Год производства</b> ${  movie.year }`
+    // movieEmail.innerHTML =`<b>Страны</b> ${  movie.country }`
+    // movieEmail.innerHTML =`<b>Жанры</b> ${  movie.genre }`
+    // movieEmail.innerHTML =`<b>Время серии</b> ${  movie.year }`
+    // movieEmail.innerHTML =`<b>Рейтинг Imdb</b> ${  movie.ratingImdb }`
+    // movieEmail.innerHTML =`<b>Рейтинг Кинопоиск</b> ${  movie.ratingKinopoisk }`
+
+    movieCard.append(movieAvatar)
+    movieCard.append(movieName, moviePhone)
+    // movieCard.append(movieEmail)
+
+    container.append(movieCard)
+}
+
+getMovie()
