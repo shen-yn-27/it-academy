@@ -1,28 +1,29 @@
 <script setup>
 import {ref} from 'vue'
+import axios  from "axios";
 
 let API_KEY = 'ba0235c4d6ba3983024e60f0b3143eddf61513a8'
 
 let search = ref ('')
+let companies = ref([])
 
 async function getCompanies(){
-  let url = 'http://suggestions.dadata.ru/suggestions/api/4_1/rs/findById/party'
+  let url = 'https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/party'
 
   let data = {
-    query: 'СберБанк'
+    query: search.value,
   }
 
   let options = {
     headers: {
       'Content-Type': 'application/json',
       'Accept': 'application/json',
-      'Authorization': 'Token' + API_KEY
+      'Authorization': 'Token ' + API_KEY
     }
-
   }
 
-  let response = await axios.get('Название сайта')
-  console.log(search.value)
+  let response = await axios.post(url, data, options)
+  companies.value = response.data.suggestions
 }
 </script>
 
@@ -38,6 +39,7 @@ async function getCompanies(){
             v-model="search"
             placeholder="Напишите название организации"
             class="search-input"
+            @keyup.enter="getCompanies"
         >
 
 
@@ -51,22 +53,45 @@ async function getCompanies(){
       <div class="companies-title">
         Найденные организации:
       </div>
+
+       <div
+           v-if="companies.length > 0"
+           class="companies"
+       >
+      <div
+        v-for="(company, index) in companies"
+        :class="{
+          'active-company': company.data.state.status === 'ACTIVE',
+          'inactive-company': company.data.state.status !== 'ACTIVE'
+        }"
+        class="company"
+      >
+        <div class="company-name">
+          {{ index + 1 }}. {{ company.value }}
+        </div>
+        <div class="company-inn">
+          ИНН: {{ company.data.inn }}
+        </div>
+        <div class="company-address">
+          Адрес: {{ company.data.address.value }}
+        </div>
+      </div>
+       </div>
+
+      <div v-else>
+        Напишите название организации в текстовое поле и нажмите на кнопку "Найти"
+      </div>
+      </div>
     </div>
-  </div>
   </div>
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.active-company{
+  background-color: #e3ffd4;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.inactive-company{
+  background-color: #ffd4d4;
 }
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
+
 </style>
