@@ -28,8 +28,9 @@ function tof() {
     <ul>
       <li
           v-for="name in faf"
+          class="waf"
       >
-        {{ name}}
+        <i>{{ name}}</i>
       </li>
     </ul>
   </div>
@@ -45,14 +46,32 @@ function tof() {
     <h3>Место для добавления</h3>
     <ol>
       <li
-          v-for="daf in rof"
+          v-for="daf in fof"
+          class="maf"
       >
-        {{ daf}}
+        <u>{{ daf}}</u>
       </li>
     </ol>
   </div>
 </template>
 
 <style scoped>
+.sa {
+  position: absolute;
+}
 
+.wa {
+  position: absolute;
+  left: 50%;
+}
+
+.waf {
+  color: limegreen;
+  font-size: 18px;
+}
+
+.maf {
+  color: red;
+  font-size: 20px;
+}
 </style>
