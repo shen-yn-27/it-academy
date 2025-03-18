@@ -15,11 +15,15 @@ let fof = ref([])
 let nof = ref('')
 
 function tof() {
-  for (let i = 0; i < nof.value; i++) {
-    fof.value.push(rof.value)
+  if (fof.value !== '') {
+    for (let i = 0; i < nof.value; i++) {
+      fof.value.push(rof.value)
+    }
+  }
+  else {
+    alert('Введите то что указано')
   }
 }
-alert('49%...........')
 </script>
 
 <template>
