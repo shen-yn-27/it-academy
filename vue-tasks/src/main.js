@@ -5,6 +5,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import Index from "./views/index.vue";
 import Second from "./views/second.vue";
 import Third from "./views/third.vue";
+import Foruth from "./views/foruth.vue";
 
 let routes = [
     {
@@ -18,6 +19,10 @@ let routes = [
     {
         path: '/third',
         component: Third,
+    },
+    {
+        path: '/foruth',
+        component: Foruth,
     }
 ]
 
